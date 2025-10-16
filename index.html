@@ -1,18 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gift Wheel</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Gift Wheel - Daily Bonus</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>🎁 Gift Wheel</h1>
-  <div class="wheel-container">
-    <canvas id="wheel" width="300" height="300"></canvas>
-    <button id="spin">Spin</button>
+  <div class="container">
+    <div class="profile-icon">👤</div>
+
+    <div class="wheel-area">
+      <canvas id="wheel" width="320" height="320"></canvas>
+
+      <!-- pointer: маленький треугольник прямо над кнопкой, указывает вверх -->
+      <div class="pointer"></div>
+    </div>
+
+    <button id="spin">Try Your Luck</button>
+
+    <div id="result" class="result"></div>
+
+    <div class="nav-bar">
+      <button>Cases</button>
+      <button class="active">Daily Bonus</button>
+      <button>Wheel</button>
+      <button>Gifts</button>
+    </div>
   </div>
-  <p id="result"></p>
 
   <script src="script.js"></script>
 </body>
