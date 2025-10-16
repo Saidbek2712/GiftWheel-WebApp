@@ -1,0 +1,26 @@
+body {
+  font-family: sans-serif;
+  text-align: center;
+  background: #f9f9f9;
+  margin-top: 40px;
+}
+
+.wheel-container {
+  display: inline-block;
+  position: relative;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #45a049;
+}
