@@ -1,6 +1,19 @@
-* { box-sizing: border-box; }
-html,body { height:100%; margin:0; background:#000; color:#fff; font-family: Inter, Arial, sans-serif; }
+* {
+  box-sizing: border-box;
+}
 
+html, body {
+  height: 100%;
+  margin: 0;
+  color: #fff;
+  font-family: Inter, Arial, sans-serif;
+
+  /* 👇 Фон — твоя картинка */
+  background: url('galaxy.png') no-repeat center center fixed;
+  background-size: cover; /* картинка растягивается под экран */
+}
+
+/* контейнер */
 .container {
   width: 360px;
   max-width: 94%;
@@ -16,18 +29,18 @@ html,body { height:100%; margin:0; background:#000; color:#fff; font-family: Int
   position: absolute;
   top: 14px;
   right: 14px;
-  width:44px;
-  height:44px;
-  border-radius:50%;
-  border:2px solid #fff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:#111;
-  font-size:20px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(17, 17, 17, 0.6); /* немного прозрачный фон, чтоб видно галактику */
+  font-size: 20px;
 }
 
-/* область с колесом и указателем */
+/* область с колесом */
 .wheel-area {
   margin-top: 48px;
   position: relative;
@@ -40,35 +53,35 @@ html,body { height:100%; margin:0; background:#000; color:#fff; font-family: Int
 #wheel {
   background: transparent;
   border-radius: 50%;
-  box-shadow: 0 0 0 4px rgba(255,255,255,0.03);
+  box-shadow: 0 0 0 4px rgba(255, 255, 255, 0.05);
 }
 
-/* стрелка (треугольник), расположена НАД колесом, указывает вниз на центр */
+/* стрелка (над колесом, указывает вниз) */
 .pointer {
   position: absolute;
-  top: -20px; /* расстояние сверху до стрелки — чуть выше колеса */
+  top: -20px;
   left: 50%;
-  transform: translateX(-50%) rotate(0deg); /* смотрит вниз */
+  transform: translateX(-50%) rotate(180deg); /* теперь смотрит вниз */
   width: 0;
   height: 0;
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
-  border-top: 16px solid #fff; /* треугольник указывает вверх, но мы его поворачиваем */
+  border-top: 16px solid #fff;
   z-index: 20;
 }
 
-
-/* кнопка Try Your Luck под указателем */
+/* кнопка Try Your Luck */
 #spin {
-  margin-top: 18px; /* кнопка чуть ниже стрелки */
+  margin-top: 18px;
   padding: 14px 30px;
   border-radius: 14px;
   border: none;
-  background: #e6e6e6;
+  background: rgba(230, 230, 230, 0.9);
   color: #000;
   font-weight: 700;
   font-size: 16px;
   cursor: pointer;
+  backdrop-filter: blur(4px);
 }
 
 /* результат */
@@ -80,19 +93,24 @@ html,body { height:100%; margin:0; background:#000; color:#fff; font-family: Int
 
 /* нижняя навигация */
 .nav-bar {
-  display:flex;
-  gap:10px;
-  justify-content:space-around;
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
   margin-top: 28px;
   padding-bottom: 30px;
 }
-.nav-bar button{
-  background:#dcdcdc;
-  border:none;
-  padding:8px 12px;
-  border-radius:10px;
-  font-weight:600;
-  cursor:pointer;
-  color:#000;
+
+.nav-bar button {
+  background: rgba(220, 220, 220, 0.9);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  color: #000;
+  backdrop-filter: blur(4px);
 }
-.nav-bar button.active { box-shadow: inset 0 -3px 0 rgba(0,0,0,0.08); }
+
+.nav-bar button.active {
+  box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.08);
+}
